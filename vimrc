@@ -5,6 +5,10 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
+set smarttab
+set autoindent
+set mouse=a
+autocmd! BufNewFile * silent! 0r ~/.vim/skel/tmpl.%:e
 
 filetype on
 filetype plugin on
