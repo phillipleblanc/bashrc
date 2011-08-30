@@ -34,7 +34,10 @@ BLACK="\[\033[0;30m\]"
 
 export PS1="$GREEN[\u@\h \W$YELLOW\$(parse_git_branch)\$(parse_hg_branch)\$(parse_svn_branch)$GREEN]\\$ $YELLOW"
 
-alias ls="ls -G"
+eval `gdircolors ~/.dir_colors`
+
+
+alias ls="gls --color=auto"
 alias ll="ls -l"
 
 export EDITOR=/usr/bin/vim
