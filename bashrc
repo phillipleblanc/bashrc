@@ -15,16 +15,10 @@ function parse_hg_branch {
 }
 
 parse_svn_branch() {
-  if [ -f .svn/entries ] 
+  if [ -d .svn ] 
   then
-      parse_svn_url | sed -e 's#^'"$(parse_svn_repository_root)"'##g' | awk '{print " (svn::"$1")" }'
+    echo " (svn)"
   fi
-}
-parse_svn_url() {
-      cat .svn/entries | tail +5 | head -1
-}
-parse_svn_repository_root() {
-      cat .svn/entries | tail +6 | head -1
 }
 
 RED="\[\033[0;31m\]"
@@ -34,10 +28,9 @@ BLACK="\[\033[0;30m\]"
 
 export PS1="$GREEN[\u@\h \W$YELLOW\$(parse_git_branch)\$(parse_hg_branch)\$(parse_svn_branch)$GREEN]\\$ $YELLOW"
 
-eval `gdircolors ~/.dir_colors`
+hash dircolors &>/dev/null && { alias ls="ls --color=auto"; eval `dircolors ~/.dir_colors`; } || { alias ls="gls --color=auto"; eval `gdircolors ~/.dir_colors`; }
 
 
-alias ls="gls --color=auto"
 alias ll="ls -l"
 
 export EDITOR=/usr/bin/vim
