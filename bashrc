@@ -15,3 +15,5 @@ alias ll="ls -l"
 
 export EDITOR=/usr/bin/vim
 export BOOST=/home/pleblanc/Projects/boost_1_47_0
+export HISTIGNORE="&:ls:[bf]g:exit"
+set -o vi
