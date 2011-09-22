@@ -3,7 +3,7 @@ RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 BLACK="\[\033[0;30m\]"
-txtcyn='\e[0;36m' # Cyan
+txtcyn="\[\033[0;36m\]" # Cyan
 
 export PS1="$GREEN[\u@\h \W$YELLOW\$(__git_ps1 \" (%s)\")$GREEN]\\$ $txtcyn"
 
@@ -17,4 +17,3 @@ alias ll="ls -l"
 export EDITOR=/usr/bin/vim
 export BOOST=/home/pleblanc/Projects/boost_1_47_0
 export HISTIGNORE="&:ls:[bf]g:exit"
-set -o vi
