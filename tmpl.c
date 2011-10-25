@@ -1,27 +1,29 @@
 /*
- * Author: Phillip LeBlanc
- * Problem:
+ * Author: Jeremy Meador
+ * Problem: 
  *
  */
+
 
 #include <stdlib.h>
 #include <stdio.h>
 
-#define DEBUG 0
+#define DEBUG 1
 #define printd if (DEBUG) printf
 
 void run()
 {
-  /*do stuff*/
+  /**/
 }
 
 int main()
 {
-  int count,j;
+  int count, j;
   scanf("%d", &count);
   for (j=0;j<count;j++)
   {
+    printd("%d\n",count);
     run();
   }
-  return 0;
 }
+
