@@ -1,9 +1,3 @@
-/*
- * Author: Jeremy Meador
- * Problem: 
- *
- */
-
 
 #include <stdlib.h>
 #include <stdio.h>
