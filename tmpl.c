@@ -7,7 +7,8 @@
 
 void run()
 {
-  /**/
+  int i,j,k,n,w,h;
+  scanf("%d", &n);
 }
 
 int main()
@@ -16,7 +17,7 @@ int main()
   scanf("%d", &count);
   for (j=0;j<count;j++)
   {
-    printd("%d\n",count);
+    printd("%d\n",j);
     run();
   }
 }
