@@ -1,4 +1,3 @@
-
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -17,8 +16,10 @@ int main()
   scanf("%d", &count);
   for (j=0;j<count;j++)
   {
-    printd("%d\n",j);
+    printd("Case: %d\n",j+1);
     run();
   }
+  
+  return 0;
 }
 
